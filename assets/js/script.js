@@ -33,12 +33,14 @@ counters.forEach( counter => {
 const nftContainer = document.querySelector(".collections")
 const totalNftCount = 10;
 for (let nftCount = 1; nftCount<totalNftCount+1; nftCount++){
+  let imgSrc = `./assets/images/nfts/NFT(${nftCount.toString()}).webp`
     let nftImgContainer = `
       <div class="nft-container">
         <div class="nft-img-container">
-            <img src="../assets/images/nfts/NFT(${nftCount.toString()}).webp" alt="NFT-${nftCount.toString()}}" loading="lazy" height="300">
+            <img src="${imgSrc}" alt="NFT-${nftCount.toString()}}" loading="lazy" height="300">
         </div>
       </div>
     `
     nftContainer.innerHTML += nftImgContainer
 }
+
